@@ -1,0 +1,108 @@
+
+body{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55), 
+      rgba(0, 0, 0, 0.55)
+    ),url("../images/back.jpg");
+  background-size:cover;
+}
+
+.create-box {
+  display:grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.logo-box {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+input[type="text"]
+{
+    font-size:50px;
+    color: whitesmoke;  
+    padding: 20px;
+}
+
+.list-box {
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap: 20px;
+  
+  padding: 10px;
+}
+
+.button {
+  height: 100px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.822);
+  color: rgba(0, 0, 0, 0.774);
+  font-size: 50px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.74);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  transition: .2s ease-in;
+}
+
+.list-item {
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.308);
+  color: rgb(224, 224, 224);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.74);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.list-item:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 0.2s ease-out;
+  color: white;
+}
+.jump {
+  color:rgba(255, 255, 255, 0.658);
+}
+.jump:hover {
+  transform: translateY(-5px);
+  color:white;
+  transition: 0.2s ease-out;
+}
+.app-container {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns:1fr;
+  grid-row-gap: 20px;
+  animation: fadeIn .5s ease-in;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.loading {
+  padding: 20px;  
+  animation: fadeOut 2s ease-in;
+}
+@keyframes fadeOut{
+  0%{
+    opacity: .1;
+  }
+  50%{
+    opacity: .8;
+  }
+  100%{
+    opacity: 0;
+  }
+}
