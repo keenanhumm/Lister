@@ -1,5 +1,5 @@
 {
-  "name": "lyrical",
+  "name": "lister",
   "version": "1.0.0",
   "description": "Starter point for a graphQL course",
   "main": "index.js",
@@ -8,7 +8,8 @@
     "url": "https://github.com/StephenGrider/Lyrical-GraphQL"
   },
   "scripts": {
-    "dev": "nodemon index.js --ignore client"
+    "dev": "nodemon index.js --ignore client",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -38,11 +39,12 @@
     "react-flip-move": "^3.0.2",
     "react-router": "^3.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.0",
     "webpack-dev-middleware": "^1.9.0"
   },
   "devDependencies": {
     "file-loader": "^1.1.11",
-    "image-webpack-loader": "^4.3.1"
+    "image-webpack-loader": "^4.3.1",
+    "webpack": "^2.7.0",
+    "webpack-cli": "^3.0.6"
   }
 }
