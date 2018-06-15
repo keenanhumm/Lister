@@ -6,6 +6,8 @@ import { ApolloProvider } from "react-apollo";
 import { Router, Route, hashHistory, IndexRoot } from "react-router";
 import App from './components/App';
 import SongCreate from './components/SongCreate';
+import './images/favicon.png';
+import './images/favicon-iphone-144.png';
 
 const client = new ApolloClient({});
 
