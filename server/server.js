@@ -4,7 +4,7 @@ const expressGraphQL = require('express-graphql');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const schema = require('./schema/schema');
-const port = process.env.PORT || 4000;
+
 
 
 const app = express();
@@ -33,8 +33,5 @@ const webpack = require('webpack');
 const webpackConfig = require('../webpack.config.js');
 app.use(webpackMiddleware(webpack(webpackConfig)));
 
-app.listen(port, ()=>{
-  console.log('server up');
-});
 
 module.exports = app;
