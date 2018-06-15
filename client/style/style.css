@@ -43,11 +43,16 @@ input[type="text"]
   justify-content: center;
   border-radius: 5px;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.74);
+  animation: moveInLeft 1s ease-in;
 }
 
 .button:hover {
   transform: scale(1.1);
   transition: .2s ease-in;
+}
+.button:active {
+  transform: scale(.8);
+  transition: .1s ease-out;
 }
 
 .list-item {
@@ -68,6 +73,20 @@ input[type="text"]
   transition: 0.2s ease-out;
   color: white;
 }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .jump {
   color:rgba(255, 255, 255, 0.658);
 }

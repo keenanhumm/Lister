@@ -35,7 +35,7 @@ class SongList extends React.Component {
   }
 
   render() {
-    if(this.props.data.loading) { return <i className="material-icons large loading">sync</i> };
+    if(this.props.data.loading) { return <div></div> };
     return (  
         <FlipMove className="list-box">
           {this.renderSongs()}
