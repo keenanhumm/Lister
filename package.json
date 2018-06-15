@@ -8,7 +8,7 @@
     "url": "https://github.com/StephenGrider/Lyrical-GraphQL"
   },
   "scripts": {
-    "start": "nodemon index.js --ignore client",
+    "start": "node index.js",
     "build": "webpack"
   },
   "author": "",
@@ -26,7 +26,7 @@
     "express": "^4.14.0",
     "express-graphql": "^0.6.1",
     "express-session": "^1.15.0",
-    "graphql": "^0.8.2",
+    "graphql": "^0.10.0",
     "html-webpack-plugin": "^2.26.0",
     "lodash": "^4.17.4",
     "mongoose": "^4.7.8",
@@ -40,12 +40,9 @@
     "react-router": "^3.0.2",
     "style-loader": "^0.13.1",
     "webpack": "2.7.0",
-    "webpack-dev-middleware": "^1.9.0"
-  },
-  "devDependencies": {
+    "webpack-dev-middleware": "^1.9.0",
     "file-loader": "^1.1.11",
     "image-webpack-loader": "^4.3.1",
-    "webpack": "^2.7.0",
     "webpack-cli": "^3.0.6"
   }
 }
