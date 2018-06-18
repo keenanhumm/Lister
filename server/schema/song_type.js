@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const graphql = require('graphql');
-const { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLList } = graphql;
+const { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLList, GraphQLInt } = graphql;
 const LyricType = require('./lyric_type');
 const Song = mongoose.model('song');
 
@@ -9,6 +9,7 @@ const SongType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     title: { type: GraphQLString },
+    likes: { type: GraphQLInt },
     lyrics: {
       type: new GraphQLList(LyricType),
       resolve(parentValue) {

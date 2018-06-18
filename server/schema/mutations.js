@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const { GraphQLObjectType, GraphQLString, GraphQLID } = graphql;
+const { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLInt } = graphql;
 const mongoose = require('mongoose');
 const Song = mongoose.model('song');
 const Lyric = mongoose.model('lyric');
@@ -12,10 +12,11 @@ const mutation = new GraphQLObjectType({
     addSong: {
       type: SongType,
       args: {
-        title: { type: GraphQLString }
+        title: { type: GraphQLString },
+        likes: { type: GraphQLInt }
       },
-      resolve(parentValue, { title }) {
-        return (new Song({ title })).save()
+      resolve(parentValue, { title, likes }) {
+        return (new Song({ title, likes })).save()
       }
     },
     addLyricToSong: {
@@ -28,11 +29,11 @@ const mutation = new GraphQLObjectType({
         return Song.addLyric(songId, content);
       }
     },
-    likeLyric: {
-      type: LyricType,
+    likeSong: {
+      type: SongType,
       args: { id: { type: GraphQLID } },
       resolve(parentValue, { id }) {
-        return Lyric.like(id);
+        return Song.like(id);
       }
     },
     deleteSong: {

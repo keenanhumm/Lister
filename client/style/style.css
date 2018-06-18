@@ -64,8 +64,16 @@ input[type="text"]
   color: rgb(224, 224, 224);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.74);
   border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 5fr 1fr;
+  align-items: center;
+}
+.like{
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  align-items: center;
+  justify-items: center; 
+  font-size: 30px;
 }
 .list-item:hover {
   cursor: pointer;

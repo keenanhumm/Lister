@@ -19,7 +19,8 @@ class SongCreate extends React.Component {
       this.props
         .mutate({
           variables: {
-            title: this.state.title
+            title: this.state.title,
+            likes: 0
           },
           refetchQueries: [
             {
@@ -62,10 +63,11 @@ class SongCreate extends React.Component {
 }
 
 const mutation = gql`
-  mutation AddSong($title: String) {
-    addSong(title: $title) {
+  mutation AddSong($title: String, $likes: Int) {
+    addSong(title: $title, likes: $likes) {
       id
       title
+      likes
     }
   }
 `;

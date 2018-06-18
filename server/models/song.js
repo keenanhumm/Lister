@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const SongSchema = new Schema({
   title: { type: String },
+  likes: { type: Number },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'user'
@@ -12,6 +13,15 @@ const SongSchema = new Schema({
     ref: 'lyric'
   }]
 });
+
+SongSchema.statics.like = function(id) {
+  const Song = mongoose.model('song');
+
+  return Song.findById(id).then(song => {
+    ++song.likes;
+    return song.save();
+  });
+};
 
 SongSchema.statics.addLyric = function(id, content) {
   const Lyric = mongoose.model('lyric');
