@@ -11,7 +11,7 @@ export default () => {
             </div>
             
             <Link
-                to="/songs/create"
+                to="/create"
                 className="button"
             >
                 + ADD

@@ -3,6 +3,7 @@ import gql from "graphql-tag";
 import { graphql } from "react-apollo";
 import { Link, hashHistory } from "react-router";
 import { fetchSongs } from "../queries";
+import validator from 'validator';
 
 class SongCreate extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class SongCreate extends React.Component {
   }
   onSubmit(event) {
     event.preventDefault();
-    if (this.state.title !== "") {
+    if (!(validator.isEmpty(this.state.title)) && validator.isAlpha(this.state.title) && this.state.title.length < 20) {
       this.props
         .mutate({
           variables: {
@@ -47,7 +48,7 @@ class SongCreate extends React.Component {
               this.setState({ title: event.target.value });
             }}
             type="text"
-            placeholder="Name of item here"
+            placeholder="Insert text here"
           />
           {this.state.title !== "" && (
             <button className="button" type="submit">
