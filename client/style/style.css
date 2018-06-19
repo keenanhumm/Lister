@@ -1,32 +1,30 @@
-
-body{
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.55), 
-      rgba(0, 0, 0, 0.55)
-    ),url("../images/back.jpg");
-  background-size:cover;
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Oswald|Source+Sans+Pro|Tajawal|Titillium+Web");
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../images/back.jpg");
+  background-size: cover;
 }
 
 .create-box {
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr;
   align-items: center;
 }
 .logo-box {
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-input[type="text"]
-{
-    font-size:50px;
-    color: whitesmoke;  
-    padding: 20px;
+input[type="text"] {
+  font-size: 50px;
+  color: whitesmoke;
+  padding: 20px;
 }
 
 .list-box {
   display: grid;
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
   padding: 10px;
 }
@@ -37,7 +35,7 @@ input[type="text"]
   background-color: rgba(255, 255, 255, 0.822);
   color: rgba(0, 0, 0, 0.774);
   font-size: 50px;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
@@ -47,16 +45,15 @@ input[type="text"]
 
 .button:hover {
   transform: scale(1.1);
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
 }
 .button:active {
-  transform: scale(.8);
-  transition: .1s ease-out;
+  transform: scale(0.8);
+  transition: 0.1s ease-out;
 }
 
 .list-item {
   padding: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 40px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.308);
@@ -67,17 +64,17 @@ input[type="text"]
   grid-template-columns: 2fr 5fr 1fr;
   align-items: center;
 }
-.like{
+.like {
   display: grid;
   grid-template-rows: 3fr 1fr;
   align-items: center;
-  justify-items: center; 
+  justify-items: center;
   font-size: 30px;
 }
 .like-icon {
-  transition: .1s ease-in;
+  transition: 0.1s ease-in;
 }
-.like-icon:active{
+.like-icon:active {
   transform: scale(1.05);
   color: white;
 }
@@ -103,39 +100,39 @@ input[type="text"]
 }
 
 .jump {
-  color:rgba(255, 255, 255, 0.658);
+  color: rgba(255, 255, 255, 0.658);
 }
 .jump:active {
-  color:white;
+  color: white;
 }
 .app-container {
   margin-top: 100px;
   margin-bottom: 100px;
   display: grid;
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
   grid-row-gap: 20px;
-  animation: fadeIn .5s ease-in;
+  animation: fadeIn 0.5s ease-in;
 }
-@keyframes fadeIn{
-  0%{
+@keyframes fadeIn {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 .loading {
-  padding: 20px;  
+  padding: 20px;
   animation: fadeOut 2s ease-in;
 }
-@keyframes fadeOut{
-  0%{
-    opacity: .1;
+@keyframes fadeOut {
+  0% {
+    opacity: 0.1;
   }
-  50%{
-    opacity: .8;
+  50% {
+    opacity: 0.8;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
