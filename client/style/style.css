@@ -28,7 +28,6 @@ input[type="text"]
   display: grid;
   grid-template-columns:1fr;
   grid-gap: 20px;
-  
   padding: 10px;
 }
 
@@ -58,7 +57,7 @@ input[type="text"]
 .list-item {
   padding: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.308);
   color: rgb(224, 224, 224);
@@ -75,6 +74,14 @@ input[type="text"]
   justify-items: center; 
   font-size: 30px;
 }
+.like-icon {
+  transition: .1s ease-in;
+}
+.like-icon:active{
+  transform: scale(1.05);
+  color: white;
+}
+
 .list-item:hover {
   cursor: pointer;
   transform: scale(1.02);
@@ -98,13 +105,12 @@ input[type="text"]
 .jump {
   color:rgba(255, 255, 255, 0.658);
 }
-.jump:hover {
-  transform: translateY(-5px);
+.jump:active {
   color:white;
-  transition: 0.2s ease-out;
 }
 .app-container {
   margin-top: 100px;
+  margin-bottom: 100px;
   display: grid;
   grid-template-columns:1fr;
   grid-row-gap: 20px;

@@ -9,7 +9,9 @@ import SongCreate from './components/SongCreate';
 import './images/favicon.png';
 import './images/favicon-iphone-144.png';
 
-const client = new ApolloClient({});
+const client = new ApolloClient({
+  dataIdFromObject: o => o.id
+});
 
 const Root = () => {
   return (

@@ -49,7 +49,7 @@ class SongCreate extends React.Component {
               this.setState({ title: event.target.value });
             }}
             type="text"
-            placeholder="Insert text here"
+            placeholder="Insert first name here"
           />
           {this.state.title !== "" && (
             <button className="button" type="submit">
